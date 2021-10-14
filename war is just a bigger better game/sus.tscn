@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://dirt auto tile.tres" type="TileSet" id=2]
+[ext_resource path="res://New Piskel-1.png.png" type="Texture" id=3]
+[ext_resource path="res://death plane.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sussy baka.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 320, 96 )
+
+[node name="death plane" parent="." instance=ExtResource( 4 )]
+position = Vector2( 32, 352 )
+
+[node name="death plane2" parent="death plane" instance=ExtResource( 4 )]
+visible = true
+position = Vector2( 64, 0 )
+
+[node name="death plane3" parent="death plane" instance=ExtResource( 4 )]
+visible = true
+position = Vector2( 128, 0 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( -65537, 1, 6, -131072, 1, 196609, -131071, 1, 196609, -131070, 1, 196609, -131069, 1, 196609, -131068, 1, 196609, -131067, 1, 196609, -131066, 1, 196609, -131065, 1, 196609, -131064, 1, 196609, -131063, 1, 7, -1, 1, 65541, -65527, 1, 65541, 65535, 1, 65541, 9, 1, 65541, 131071, 1, 65541, 65545, 1, 65541, 196607, 1, 65541, 131075, 1, 1, 131076, 1, 65536, 131077, 1, 2, 131081, 1, 65541, 262143, 1, 65541, 196611, 1, 131073, 196612, 1, 196619, 196613, 1, 131074, 196617, 1, 65541, 327679, 1, 65541, 262147, 1, 131073, 262148, 1, 196619, 262149, 1, 131074, 262153, 1, 65541, 393215, 1, 65541, 327683, 1, 131073, 327684, 1, 196619, 327685, 1, 131074, 327689, 1, 65541, 458751, 1, 65542, 393216, 1, 196609, 393217, 1, 196609, 393218, 1, 196609, 393219, 1, 65544, 393220, 1, 131072, 393221, 1, 65547, 393222, 1, 196609, 393223, 1, 196609, 393224, 1, 196609, 393225, 1, 65543 )
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 192.0
+margin_top = -64.0
+margin_right = 352.0
+margin_bottom = -24.0
+text = "what is this character?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="New Piskel-1png" type="Sprite" parent="."]
+position = Vector2( 288, 1.52588e-05 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 160.0
+margin_bottom = 104.0
+text = "amongus"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit3" type="TextEdit" parent="."]
+margin_left = 448.0
+margin_top = 64.0
+margin_right = 544.0
+margin_bottom = 104.0
+text = "sus"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sussy baka" parent="." instance=ExtResource( 5 )]
+position = Vector2( 480, 352 )
+
+[node name="sussy baka2" parent="sussy baka" instance=ExtResource( 5 )]
+visible = false
+position = Vector2( 64, 0 )
+
+[node name="sussy baka3" parent="sussy baka" instance=ExtResource( 5 )]
+visible = false
+position = Vector2( -64, 0 )

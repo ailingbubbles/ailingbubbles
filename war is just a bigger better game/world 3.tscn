@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://dirt auto tile.tres" type="TileSet" id=1]
+[ext_resource path="res://Level3Finished.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://death plane.tscn" type="PackedScene" id=4]
+
+[node name="Node" type="Node"]
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 32, 288 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 65530, 1, 1, 65531, 1, 65536, 65532, 1, 65536, 65533, 1, 65536, 65534, 1, 65536, 65535, 1, 2, 14, 1, 196608, 15, 1, 196609, 16, 1, 196610, 131066, 1, 131073, 131067, 1, 196619, 131068, 1, 196619, 131069, 1, 196619, 131070, 1, 196619, 131071, 1, 131074, 65547, 1, 196608, 65548, 1, 196610, 196602, 1, 131073, 196603, 1, 196619, 196604, 1, 196619, 196605, 1, 196619, 196606, 1, 196619, 196607, 1, 131074, 131080, 1, 196613, 262138, 1, 131073, 262139, 1, 196619, 262140, 1, 196619, 262141, 1, 196619, 262142, 1, 196619, 262143, 1, 131074, 196619, 1, 196613, 327674, 1, 131073, 327675, 1, 196619, 327676, 1, 196619, 327677, 1, 196619, 327678, 1, 196619, 327679, 1, 131074, 262158, 1, 196608, 262159, 1, 196610, 393210, 1, 131073, 393211, 1, 196619, 393212, 1, 196619, 393213, 1, 196619, 393214, 1, 196619, 393215, 1, 65539, 327680, 1, 65536, 327681, 1, 65536, 327682, 1, 65536, 327683, 1, 65536, 327684, 1, 65536, 327685, 1, 2, 327688, 1, 1, 327689, 1, 65536, 327690, 1, 65536, 327691, 1, 2, 458746, 1, 131073, 458747, 1, 196619, 458748, 1, 196619, 458749, 1, 196619, 458750, 1, 196619, 458751, 1, 196619, 393216, 1, 196619, 393217, 1, 196619, 393218, 1, 196619, 393219, 1, 196619, 393220, 1, 196619, 393221, 1, 131074, 393224, 1, 131073, 393225, 1, 196619, 393226, 1, 196619, 393227, 1, 131074, 524282, 1, 131073, 524283, 1, 196619, 524284, 1, 196619, 524285, 1, 196619, 524286, 1, 196619, 524287, 1, 196619, 458752, 1, 196619, 458753, 1, 196619, 458754, 1, 196619, 458755, 1, 196619, 458756, 1, 196619, 458757, 1, 131074, 458760, 1, 131073, 458761, 1, 196619, 458762, 1, 196619, 458763, 1, 131074, 589818, 1, 131073, 589819, 1, 196619, 589820, 1, 196619, 589821, 1, 196619, 589822, 1, 196619, 589823, 1, 196619, 524288, 1, 196619, 524289, 1, 196619, 524290, 1, 196619, 524291, 1, 196619, 524292, 1, 196619, 524293, 1, 131074, 524296, 1, 131073, 524297, 1, 196619, 524298, 1, 196619, 524299, 1, 131074, 655354, 1, 131073, 655355, 1, 196619, 655356, 1, 196619, 655357, 1, 196619, 655358, 1, 196619, 655359, 1, 196619, 589824, 1, 196619, 589825, 1, 196619, 589826, 1, 196619, 589827, 1, 196619, 589828, 1, 196619, 589829, 1, 131074, 589832, 1, 131073, 589833, 1, 196619, 589834, 1, 196619, 589835, 1, 131074, 720890, 1, 131073, 720891, 1, 196619, 720892, 1, 196619, 720893, 1, 196619, 720894, 1, 196619, 720895, 1, 196619, 655360, 1, 196619, 655361, 1, 196619, 655362, 1, 196619, 655363, 1, 196619, 655364, 1, 196619, 655365, 1, 131074, 655368, 1, 131073, 655369, 1, 196619, 655370, 1, 196619, 655371, 1, 131074, 786426, 1, 65537, 786427, 1, 131072, 786428, 1, 131072, 786429, 1, 131072, 786430, 1, 131072, 786431, 1, 131072, 720896, 1, 131072, 720897, 1, 131072, 720898, 1, 131072, 720899, 1, 131072, 720900, 1, 131072, 720901, 1, 65538, 720904, 1, 65537, 720905, 1, 131072, 720906, 1, 131072, 720907, 1, 65538 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Level3Finished" parent="." instance=ExtResource( 2 )]
+position = Vector2( 992, -32 )
+
+[node name="death plane" parent="." instance=ExtResource( 4 )]
+position = Vector2( 416, 416 )
+
+[node name="death plane2" parent="death plane" instance=ExtResource( 4 )]
+visible = true
+position = Vector2( 64, 0 )
+
+[node name="death plane3" parent="death plane" instance=ExtResource( 4 )]
+visible = true
+position = Vector2( 384, 0 )
+
+[node name="death plane4" parent="death plane" instance=ExtResource( 4 )]
+visible = true
+position = Vector2( 448, 0 )
+
+[node name="death plane5" parent="death plane" instance=ExtResource( 4 )]
+visible = true
+position = Vector2( 512, 0 )
+
+[node name="death plane6" parent="death plane" instance=ExtResource( 4 )]
+visible = true
+position = Vector2( 576, 0 )
+
+[node name="death plane7" parent="death plane" instance=ExtResource( 4 )]
+visible = true
+position = Vector2( 640, 0 )
+
+[node name="death plane8" parent="death plane" instance=ExtResource( 4 )]
+visible = true
+position = Vector2( 704, 0 )
+
+[node name="death plane9" parent="death plane" instance=ExtResource( 4 )]
+visible = true
+position = Vector2( 768, 0 )
+
+[node name="death plane10" parent="death plane" instance=ExtResource( 4 )]
+visible = true
+position = Vector2( 832, 0 )
+
+[node name="death plane11" parent="death plane" instance=ExtResource( 4 )]
+visible = true
+position = Vector2( 896, 0 )
+
+[node name="death plane12" parent="death plane" instance=ExtResource( 4 )]
+visible = true
+position = Vector2( 960, 0 )
+
+[node name="death plane13" parent="death plane" instance=ExtResource( 4 )]
+visible = true
+position = Vector2( 1024, 0 )
+
+[node name="death plane14" parent="death plane" instance=ExtResource( 4 )]
+visible = true
+position = Vector2( 1088, 0 )
